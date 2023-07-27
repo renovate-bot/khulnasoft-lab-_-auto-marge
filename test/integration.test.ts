@@ -55,7 +55,7 @@ it('full happy path', async () => {
   await app.receive(
     createPullRequestOpenedEvent({
       owner: 'khulnasoft-labs',
-      repo: 'probot-auto-merge',
+      repo: 'auto-merge',
       number: 1
     })
   )
@@ -93,7 +93,7 @@ it('not enough approval reviews', async () => {
   await app.receive(
     createPullRequestOpenedEvent({
       owner: 'khulnasoft-labs',
-      repo: 'probot-auto-merge',
+      repo: 'auto-merge',
       number: 1
     })
   )
@@ -101,7 +101,7 @@ it('not enough approval reviews', async () => {
   await app.receive(
     createCheckRunCreatedEvent({
       owner: 'khulnasoft-labs',
-      repo: 'probot-auto-merge',
+      repo: 'auto-merge',
       number: 1
     })
   )
@@ -117,7 +117,7 @@ it('not enough approval reviews', async () => {
   await app.receive(
     createCheckSuiteCompletedEvent({
       owner: 'khulnasoft-labs',
-      repo: 'probot-auto-merge',
+      repo: 'auto-merge',
       number: 1
     })
   )
@@ -148,7 +148,7 @@ it('no configuration should not schedule any pull request', async () => {
   app.receive(
     createPullRequestOpenedEvent({
       owner: 'khulnasoft-labs',
-      repo: 'probot-auto-merge',
+      repo: 'auto-merge',
       number: 1
     })
   )
@@ -188,7 +188,7 @@ it('merges when receiving status event', async () => {
                 number: 1,
                 headRefOid: '123',
                 repository: {
-                  name: 'probot-auto-merge',
+                  name: 'auto-merge',
                   owner: {
                     login: 'khulnasoft-labs'
                   }
@@ -212,7 +212,7 @@ it('merges when receiving status event', async () => {
   await app.receive(
     createStatusEvent({
       owner: 'owner-of-fork',
-      repo: 'probot-auto-merge',
+      repo: 'auto-merge',
       sha: '123',
       branchName: 'pr-1'
     })
@@ -223,13 +223,13 @@ it('merges when receiving status event', async () => {
   expect(graphql).toHaveBeenCalledWith(
     expect.anything(), expect.objectContaining({
       owner: 'owner-of-fork',
-      repo: 'probot-auto-merge'
+      repo: 'auto-merge'
     })
   )
   expect(graphql).toHaveBeenCalledWith(
     expect.anything(), expect.objectContaining({
       owner: 'khulnasoft-labs',
-      repo: 'probot-auto-merge',
+      repo: 'auto-merge',
       pullRequestNumber: 1
     })
   )
@@ -237,7 +237,7 @@ it('merges when receiving status event', async () => {
     merge_method: 'merge',
     pull_number: 1,
     owner: 'khulnasoft-labs',
-    repo: 'probot-auto-merge'
+    repo: 'auto-merge'
   })
 })
 
@@ -275,7 +275,7 @@ it('pending check run', async () => {
   await app.receive(
     createPullRequestOpenedEvent({
       owner: 'khulnasoft-labs',
-      repo: 'probot-auto-merge',
+      repo: 'auto-merge',
       number: 1
     })
   )
@@ -344,7 +344,7 @@ it('to merge when one rule and the global configuration passes', async () => {
   await app.receive(
     createPullRequestOpenedEvent({
       owner: 'khulnasoft-labs',
-      repo: 'probot-auto-merge',
+      repo: 'auto-merge',
       number: 1
     })
   )
@@ -388,7 +388,7 @@ it('to merge when the role of the pull request author is satisfied, and fail oth
   await app.receive(
     createPullRequestOpenedEvent({
       owner: 'khulnasoft-labs',
-      repo: 'probot-auto-merge',
+      repo: 'auto-merge',
       number: 1
     })
   )
@@ -401,7 +401,7 @@ it('to merge when the role of the pull request author is satisfied, and fail oth
   await app.receive(
     createPullRequestOpenedEvent({
       owner: 'khulnasoft-labs',
-      repo: 'probot-auto-merge',
+      repo: 'auto-merge',
       number: 2
     })
   )
@@ -437,7 +437,7 @@ it('to report error when processing pull request results in error', async () => 
   await app.receive(
     createPullRequestOpenedEvent({
       owner: 'khulnasoft-labs',
-      repo: 'probot-auto-merge',
+      repo: 'auto-merge',
       number: 1
     })
   )
@@ -501,7 +501,7 @@ it('to report error and continue when graphql query contained errors', async () 
   await app.receive(
     createPullRequestOpenedEvent({
       owner: 'khulnasoft-labs',
-      repo: 'probot-auto-merge',
+      repo: 'auto-merge',
       number: 1
     })
   )

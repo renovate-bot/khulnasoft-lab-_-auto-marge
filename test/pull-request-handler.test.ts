@@ -13,7 +13,7 @@ const defaultBaseRef: PullRequestInfo['baseRef'] = {
     owner: {
       login: 'khulnasoft-labs'
     },
-    name: 'probot-auto-merge'
+    name: 'auto-merge'
   },
   name: 'master',
   target: {
@@ -169,7 +169,7 @@ describe('getPullRequestPlan', () => {
     expect(plan).toEqual({
       code: 'blocked',
       actions: [],
-      message: 'Merging the pull request is blocked by branch protection rules. Please make sure probot-auto-merge has permission to push to `main` under the "Restrict who can push to matching branches" section the branch protection rules.'
+      message: 'Merging the pull request is blocked by branch protection rules. Please make sure auto-merge has permission to push to `main` under the "Restrict who can push to matching branches" section the branch protection rules.'
     })
   })
 
@@ -273,7 +273,7 @@ describe('getPullRequestPlan', () => {
             owner: {
               login: 'khulnasoft-labs'
             },
-            name: 'probot-auto-merge'
+            name: 'auto-merge'
           }
         },
         headRef: defaultPullRequestInfo.headRef && {
@@ -283,7 +283,7 @@ describe('getPullRequestPlan', () => {
             owner: {
               login: 'someone-else'
             },
-            name: 'probot-auto-merge'
+            name: 'auto-merge'
           }
         }
       }),
@@ -311,7 +311,7 @@ describe('executeAction with action', () => {
             oid: '0'
           },
           repository: {
-            name: 'probot-auto-merge',
+            name: 'auto-merge',
             owner: {
               login: 'khulnasoft-labs'
             }
@@ -326,7 +326,7 @@ describe('executeAction with action', () => {
     expect(merge).toBeCalledWith({
       merge_method: 'merge',
       owner: 'khulnasoft-labs',
-      repo: 'probot-auto-merge',
+      repo: 'auto-merge',
       pull_number: 2
     })
   })
@@ -351,7 +351,7 @@ describe('executeAction with action', () => {
             oid: '0'
           },
           repository: {
-            name: 'probot-auto-merge',
+            name: 'auto-merge',
             owner: {
               login: 'khulnasoft-labs'
             }
@@ -368,7 +368,7 @@ describe('executeAction with action', () => {
     expect(merge).toBeCalledWith({
       merge_method: 'merge',
       owner: 'khulnasoft-labs',
-      repo: 'probot-auto-merge',
+      repo: 'auto-merge',
       pull_number: 2,
       commit_message: 'pr body',
       commit_title: 'pr title (#2)'
@@ -395,7 +395,7 @@ describe('executeAction with action', () => {
             owner: {
               login: 'khulnasoft-labs'
             },
-            name: 'probot-auto-merge'
+            name: 'auto-merge'
           }
         }
       }),
@@ -405,7 +405,7 @@ describe('executeAction with action', () => {
     expect(deleteRef).toHaveBeenCalledTimes(1)
     expect(deleteRef).toBeCalledWith({
       owner: 'khulnasoft-labs',
-      repo: 'probot-auto-merge',
+      repo: 'auto-merge',
       ref: 'heads/the-merged-branch'
     })
   })
@@ -431,7 +431,7 @@ describe('executeAction with action', () => {
             owner: {
               login: 'khulnasoft-labs'
             },
-            name: 'probot-auto-merge'
+            name: 'auto-merge'
           }
         },
         baseRefOid: '1',
@@ -444,7 +444,7 @@ describe('executeAction with action', () => {
             owner: {
               login: 'khulnasoft-labs'
             },
-            name: 'probot-auto-merge'
+            name: 'auto-merge'
           }
         }
       }),
@@ -454,7 +454,7 @@ describe('executeAction with action', () => {
     expect(merge).toHaveBeenCalledTimes(1)
     expect(merge).toBeCalledWith({
       owner: 'khulnasoft-labs',
-      repo: 'probot-auto-merge',
+      repo: 'auto-merge',
       base: 'the-pr-branch',
       head: 'master'
     })

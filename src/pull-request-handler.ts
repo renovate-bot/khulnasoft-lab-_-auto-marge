@@ -216,7 +216,7 @@ export function getPullRequestPlan (
       // See: https://docs.github.com/en/graphql/reference/enums#mergestatestatus
       return {
         code: 'blocked',
-        message: `Merging the pull request is blocked by branch protection rules. Please make sure probot-auto-merge has permission to push to \`${pullRequestInfo.baseRef.name}\` under the "Restrict who can push to matching branches" section the branch protection rules.`,
+        message: `Merging the pull request is blocked by branch protection rules. Please make sure auto-merge has permission to push to \`${pullRequestInfo.baseRef.name}\` under the "Restrict who can push to matching branches" section the branch protection rules.`,
         actions: []
       }
     case MergeStateStatus.DIRTY:
