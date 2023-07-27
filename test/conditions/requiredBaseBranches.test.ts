@@ -5,7 +5,7 @@ import requiredBaseBranches from '../../src/conditions/requiredBaseBranches'
 const baseRef = {
   name: 'master',
   repository: {
-    name: 'probot-auto-merge',
+    name: 'auto-merge',
     owner: {
       login: 'khulnasoft-labs'
     }

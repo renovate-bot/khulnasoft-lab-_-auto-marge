@@ -5,7 +5,7 @@ import blockingBaseBranches from '../../src/conditions/blockingBaseBranches'
 const baseRef = {
   name: 'master',
   repository: {
-    name: 'probot-auto-merge',
+    name: 'auto-merge',
     owner: {
       login: 'khulnasoft-labs'
     }

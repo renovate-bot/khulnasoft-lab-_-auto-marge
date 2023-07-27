@@ -33,7 +33,7 @@ export const defaultPullRequestInfo = {
   baseRef: {
     name: 'master',
     repository: {
-      name: 'probot-auto-merge',
+      name: 'auto-merge',
       owner: {
         login: 'khulnasoft-labs'
       }
@@ -46,7 +46,7 @@ export const defaultPullRequestInfo = {
   headRef: {
     name: 'pr-some-change',
     repository: {
-      name: 'probot-auto-merge',
+      name: 'auto-merge',
       owner: {
         login: 'khulnasoft-labs'
       }
@@ -184,7 +184,7 @@ export function createCheckRun (options?: Partial<CheckRun>): CheckRun {
 export function createRef (options: Partial<Ref> & Pick<Ref, 'name'>): Ref {
   return {
     repository: {
-      name: 'probot-auto-merge',
+      name: 'auto-merge',
       owner: {
         login: 'khulnasoft-labs'
       }
