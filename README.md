@@ -1,2 +1,2 @@
 # auto-marge
-[![Coverage](https://img.shields.io/coveralls/github/khulnasoft-labs/auto-merge.svg)](https://coveralls.io/github/khulnasoft-labs/auto-merge)
+[![Coverage Status](https://coveralls.io/repos/github/khulnasoft-labs/auto-marge/badge.svg?branch=master)](https://coveralls.io/github/khulnasoft-labs/auto-marge?branch=master)
