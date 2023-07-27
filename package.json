@@ -1,6 +1,11 @@
 {
   "name": "auto-marge",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
+  "author": "Md Sulaiman <infosulaimanbd@gmail.com>(https://github.com/khulnasoft-labs)",
+  "license": "ISC",
+  "repository": "https://github.com/khulnasoft-labs/auto-merge.git",
+  "homepage": "https://github.com/khulnasoft-labs/auto-merge",
+  "bugs": "https://github.com/khulnasoft-labs/auto-merge/issues",
   "description": "",
   "scripts": {
     "build": "tsc -p tsconfig.json",
@@ -22,8 +27,6 @@
     "schema:update": "npm run schema:download && npm run schema:codegen",
     "semantic-release": "semantic-release"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "@mojotech/json-type-validation": "^3.1.0",
     "bunyan-sentry-stream": "^1.2.1",
@@ -42,7 +45,7 @@
     "@types/p-queue": "^3.0.0",
     "@types/raven": "^2.5.3",
     "@typescript-eslint/eslint-plugin": "^4.10.0",
-    "@typescript-eslint/parser": "^2.6.0",
+    "@typescript-eslint/parser": "^4.33.0",
     "apollo": "^2.5.1",
     "codecov": "^3.2.0",
     "coveralls": "^3.0.2",
