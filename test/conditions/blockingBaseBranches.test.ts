@@ -7,7 +7,7 @@ const baseRef = {
   repository: {
     name: 'auto-merge',
     owner: {
-      login: 'khulnasoft-labs'
+      login: 'khulnasoft-lab'
     }
   },
   target: {

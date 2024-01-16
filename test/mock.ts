@@ -35,7 +35,7 @@ export const defaultPullRequestInfo = {
     repository: {
       name: 'auto-merge',
       owner: {
-        login: 'khulnasoft-labs'
+        login: 'khulnasoft-lab'
       }
     },
     target: {
@@ -48,7 +48,7 @@ export const defaultPullRequestInfo = {
     repository: {
       name: 'auto-merge',
       owner: {
-        login: 'khulnasoft-labs'
+        login: 'khulnasoft-lab'
       }
     },
     target: {
@@ -186,7 +186,7 @@ export function createRef (options: Partial<Ref> & Pick<Ref, 'name'>): Ref {
     repository: {
       name: 'auto-merge',
       owner: {
-        login: 'khulnasoft-labs'
+        login: 'khulnasoft-lab'
       }
     },
     target: {

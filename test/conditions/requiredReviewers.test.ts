@@ -51,14 +51,14 @@ describe('requiredReviewers', () => {
       createConditionConfig({
         requiredReviewers: [
           'rogerluan',
-          'khulnasoft-labs'
+          'khulnasoft-lab'
         ]
       }),
       createPullRequestInfo({
         reviews: {
           nodes: [
             approvedReview({ author: { login: 'rogerluan' } }),
-            approvedReview({ author: { login: 'khulnasoft-labs' } })
+            approvedReview({ author: { login: 'khulnasoft-lab' } })
           ]
         }
       })

@@ -54,7 +54,7 @@ it('full happy path', async () => {
 
   await app.receive(
     createPullRequestOpenedEvent({
-      owner: 'khulnasoft-labs',
+      owner: 'khulnasoft-lab',
       repo: 'auto-merge',
       number: 1
     })
@@ -92,7 +92,7 @@ it('not enough approval reviews', async () => {
 
   await app.receive(
     createPullRequestOpenedEvent({
-      owner: 'khulnasoft-labs',
+      owner: 'khulnasoft-lab',
       repo: 'auto-merge',
       number: 1
     })
@@ -100,7 +100,7 @@ it('not enough approval reviews', async () => {
 
   await app.receive(
     createCheckRunCreatedEvent({
-      owner: 'khulnasoft-labs',
+      owner: 'khulnasoft-lab',
       repo: 'auto-merge',
       number: 1
     })
@@ -116,7 +116,7 @@ it('not enough approval reviews', async () => {
 
   await app.receive(
     createCheckSuiteCompletedEvent({
-      owner: 'khulnasoft-labs',
+      owner: 'khulnasoft-lab',
       repo: 'auto-merge',
       number: 1
     })
@@ -147,7 +147,7 @@ it('no configuration should not schedule any pull request', async () => {
 
   app.receive(
     createPullRequestOpenedEvent({
-      owner: 'khulnasoft-labs',
+      owner: 'khulnasoft-lab',
       repo: 'auto-merge',
       number: 1
     })
@@ -190,7 +190,7 @@ it('merges when receiving status event', async () => {
                 repository: {
                   name: 'auto-merge',
                   owner: {
-                    login: 'khulnasoft-labs'
+                    login: 'khulnasoft-lab'
                   }
                 }
               }
@@ -228,7 +228,7 @@ it('merges when receiving status event', async () => {
   )
   expect(graphql).toHaveBeenCalledWith(
     expect.anything(), expect.objectContaining({
-      owner: 'khulnasoft-labs',
+      owner: 'khulnasoft-lab',
       repo: 'auto-merge',
       pullRequestNumber: 1
     })
@@ -236,7 +236,7 @@ it('merges when receiving status event', async () => {
   expect(github.pulls.merge).toHaveBeenCalledWith({
     merge_method: 'merge',
     pull_number: 1,
-    owner: 'khulnasoft-labs',
+    owner: 'khulnasoft-lab',
     repo: 'auto-merge'
   })
 })
@@ -274,7 +274,7 @@ it('pending check run', async () => {
 
   await app.receive(
     createPullRequestOpenedEvent({
-      owner: 'khulnasoft-labs',
+      owner: 'khulnasoft-lab',
       repo: 'auto-merge',
       number: 1
     })
@@ -343,7 +343,7 @@ it('to merge when one rule and the global configuration passes', async () => {
 
   await app.receive(
     createPullRequestOpenedEvent({
-      owner: 'khulnasoft-labs',
+      owner: 'khulnasoft-lab',
       repo: 'auto-merge',
       number: 1
     })
@@ -387,7 +387,7 @@ it('to merge when the role of the pull request author is satisfied, and fail oth
 
   await app.receive(
     createPullRequestOpenedEvent({
-      owner: 'khulnasoft-labs',
+      owner: 'khulnasoft-lab',
       repo: 'auto-merge',
       number: 1
     })
@@ -400,7 +400,7 @@ it('to merge when the role of the pull request author is satisfied, and fail oth
 
   await app.receive(
     createPullRequestOpenedEvent({
-      owner: 'khulnasoft-labs',
+      owner: 'khulnasoft-lab',
       repo: 'auto-merge',
       number: 2
     })
@@ -436,7 +436,7 @@ it('to report error when processing pull request results in error', async () => 
 
   await app.receive(
     createPullRequestOpenedEvent({
-      owner: 'khulnasoft-labs',
+      owner: 'khulnasoft-lab',
       repo: 'auto-merge',
       number: 1
     })
@@ -500,7 +500,7 @@ it('to report error and continue when graphql query contained errors', async () 
 
   await app.receive(
     createPullRequestOpenedEvent({
-      owner: 'khulnasoft-labs',
+      owner: 'khulnasoft-lab',
       repo: 'auto-merge',
       number: 1
     })

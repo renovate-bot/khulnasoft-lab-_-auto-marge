@@ -1,11 +1,11 @@
 {
   "name": "auto-marge",
   "version": "0.0.0-development",
-  "author": "Md Sulaiman <infosulaimanbd@gmail.com>(https://github.com/khulnasoft-labs)",
+  "author": "Md Sulaiman <infosulaimanbd@gmail.com>(https://github.com/khulnasoft-lab)",
   "license": "ISC",
-  "repository": "https://github.com/khulnasoft-labs/auto-merge.git",
-  "homepage": "https://github.com/khulnasoft-labs/auto-merge",
-  "bugs": "https://github.com/khulnasoft-labs/auto-merge/issues",
+  "repository": "https://github.com/khulnasoft-lab/auto-merge.git",
+  "homepage": "https://github.com/khulnasoft-lab/auto-merge",
+  "bugs": "https://github.com/khulnasoft-lab/auto-merge/issues",
   "description": "",
   "scripts": {
     "build": "tsc -p tsconfig.json",

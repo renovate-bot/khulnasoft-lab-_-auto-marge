@@ -11,7 +11,7 @@ import { MergeStateStatus, PullRequestState } from '../src/query.graphql'
 const defaultBaseRef: PullRequestInfo['baseRef'] = {
   repository: {
     owner: {
-      login: 'khulnasoft-labs'
+      login: 'khulnasoft-lab'
     },
     name: 'auto-merge'
   },
@@ -271,7 +271,7 @@ describe('getPullRequestPlan', () => {
           name: 'master',
           repository: {
             owner: {
-              login: 'khulnasoft-labs'
+              login: 'khulnasoft-lab'
             },
             name: 'auto-merge'
           }
@@ -313,7 +313,7 @@ describe('executeAction with action', () => {
           repository: {
             name: 'auto-merge',
             owner: {
-              login: 'khulnasoft-labs'
+              login: 'khulnasoft-lab'
             }
           }
         },
@@ -325,7 +325,7 @@ describe('executeAction with action', () => {
     expect(merge).toHaveBeenCalledTimes(1)
     expect(merge).toBeCalledWith({
       merge_method: 'merge',
-      owner: 'khulnasoft-labs',
+      owner: 'khulnasoft-lab',
       repo: 'auto-merge',
       pull_number: 2
     })
@@ -353,7 +353,7 @@ describe('executeAction with action', () => {
           repository: {
             name: 'auto-merge',
             owner: {
-              login: 'khulnasoft-labs'
+              login: 'khulnasoft-lab'
             }
           }
         },
@@ -367,7 +367,7 @@ describe('executeAction with action', () => {
     expect(merge).toHaveBeenCalledTimes(1)
     expect(merge).toBeCalledWith({
       merge_method: 'merge',
-      owner: 'khulnasoft-labs',
+      owner: 'khulnasoft-lab',
       repo: 'auto-merge',
       pull_number: 2,
       commit_message: 'pr body',
@@ -393,7 +393,7 @@ describe('executeAction with action', () => {
           },
           repository: {
             owner: {
-              login: 'khulnasoft-labs'
+              login: 'khulnasoft-lab'
             },
             name: 'auto-merge'
           }
@@ -404,7 +404,7 @@ describe('executeAction with action', () => {
 
     expect(deleteRef).toHaveBeenCalledTimes(1)
     expect(deleteRef).toBeCalledWith({
-      owner: 'khulnasoft-labs',
+      owner: 'khulnasoft-lab',
       repo: 'auto-merge',
       ref: 'heads/the-merged-branch'
     })
@@ -429,7 +429,7 @@ describe('executeAction with action', () => {
           },
           repository: {
             owner: {
-              login: 'khulnasoft-labs'
+              login: 'khulnasoft-lab'
             },
             name: 'auto-merge'
           }
@@ -442,7 +442,7 @@ describe('executeAction with action', () => {
           },
           repository: {
             owner: {
-              login: 'khulnasoft-labs'
+              login: 'khulnasoft-lab'
             },
             name: 'auto-merge'
           }
@@ -453,7 +453,7 @@ describe('executeAction with action', () => {
 
     expect(merge).toHaveBeenCalledTimes(1)
     expect(merge).toBeCalledWith({
-      owner: 'khulnasoft-labs',
+      owner: 'khulnasoft-lab',
       repo: 'auto-merge',
       base: 'the-pr-branch',
       head: 'master'

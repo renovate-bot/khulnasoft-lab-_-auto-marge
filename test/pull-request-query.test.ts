@@ -23,7 +23,7 @@ describe('queryPullRequest', () => {
           listForRef
         }
       }),
-      { owner: 'khulnasoft-labs', repo: 'auto-merge', number: 1 }
+      { owner: 'khulnasoft-lab', repo: 'auto-merge', number: 1 }
     )
     expect(graphql).toHaveBeenCalledTimes(1)
   })
@@ -34,7 +34,7 @@ describe('queryPullRequest', () => {
       createGithubApi({
         graphql
       }),
-      { owner: 'khulnasoft-labs', repo: 'auto-merge', number: 1 }
+      { owner: 'khulnasoft-lab', repo: 'auto-merge', number: 1 }
     )).rejects.toThrowError('Could not query pull request')
   })
 
@@ -44,7 +44,7 @@ describe('queryPullRequest', () => {
       createGithubApi({
         graphql
       }),
-      { owner: 'khulnasoft-labs', repo: 'auto-merge', number: 1 }
+      { owner: 'khulnasoft-lab', repo: 'auto-merge', number: 1 }
     )).rejects.toThrowError('Query result does not have repository')
   })
 
@@ -61,7 +61,7 @@ describe('queryPullRequest', () => {
       createGithubApi({
         graphql
       }),
-      { owner: 'khulnasoft-labs', repo: 'auto-merge', number: 1 }
+      { owner: 'khulnasoft-lab', repo: 'auto-merge', number: 1 }
     )).rejects.toThrowError('No permission to source repository of pull request')
   })
 
@@ -85,7 +85,7 @@ describe('queryPullRequest', () => {
       createGithubApi({
         graphql
       }),
-      { owner: 'khulnasoft-labs', repo: 'auto-merge', number: 1 }
+      { owner: 'khulnasoft-lab', repo: 'auto-merge', number: 1 }
     )
     expect(captureException).toBeCalled()
   })
@@ -121,7 +121,7 @@ describe('queryPullRequest', () => {
       createGithubApi({
         graphql
       }),
-      { owner: 'khulnasoft-labs', repo: 'auto-merge', number: 1 }
+      { owner: 'khulnasoft-lab', repo: 'auto-merge', number: 1 }
     )
     expect(captureException).not.toBeCalled()
   })
